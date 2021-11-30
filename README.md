@@ -1,10 +1,28 @@
-# ExitNode
 
-apt update
-apt upgrade
-apt install docker.io
-docker pull blacktop/zeek
-mkdir pcap
-mkdir conf
-sudo apt install nyx
+## ExitNode
+
+To deploy tor server:
+
+```bash
+  sudo apt update
+```
+
+```bash
+  sudo apt upgrade
+```
+```bash
+  sudo apt install docker.io
+```
+```bash
+  sudo docker pull blacktop/zeek
+```
+```bash
+  mkdir data
+```
+```bash
+  mkdir conf
+```
+```bash
+  sudo apt install nyx
+```
 
