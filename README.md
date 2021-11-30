@@ -25,4 +25,7 @@ To deploy tor server:
 ```bash
   sudo apt install nyx
 ```
-
+change interface and IP in run-zeek.sh 
+```bash
+  .\run-zeek.sh
+```
