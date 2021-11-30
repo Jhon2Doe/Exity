@@ -128,7 +128,7 @@ echo 'Zeek has been created !!...'
 echo -e $TEXT_RESET
 
 echo -e $TEXT_RED_B
-echo 'DATA interception has been deployed'
+echo 'TOR traffic interception has been deployed'
 echo -e $TEXT_RESET
 
 
