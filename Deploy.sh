@@ -112,16 +112,22 @@ echo -e $TEXT_RESET
 echo -e $TEXT_YELLOW
 echo 'installing TOR & Nyx...'
 echo -e $TEXT_RESET
-apt install tor
+sudo apt install tor
 sudo apt install nyx
 echo -e $TEXT_YELLOW
 echo 'TOR & Nyx installed seccessfully !!...'
 echo -e $TEXT_RESET
 
-echo -e $TEXT_RED_B
-echo 'HAPPY Hunting'
+echo -e $TEXT_YELLOW
+echo 'Creating ZEEK Container !!...'
 echo -e $TEXT_RESET
-
+docker run --name zeek -d -v $(pwd)/data:/pcap -v $(pwd)/conf/sniffpass.zeek:/usr/local/zeek/share/zeek/myscripts/sniffpass.zeek -v $(pwd)/conf/local.zeek:/usr/local/zeek/share/zeek/site/local.zeek --net host blacktop/zeek -C -i eth0 local "Site::local_nets += { 172.105.0.1/16 }"
 echo -e $TEXT_YELLOW
 echo 'Zeek has been created !!...'
 echo -e $TEXT_RESET
+
+echo -e $TEXT_RED_B
+echo 'DATA interception has been deployed'
+echo -e $TEXT_RESET
+
+
