@@ -3,7 +3,7 @@
 
 unset tecreset os architecture kernelrelease internalip externalip nameserver loadaverage
 
-# Define Variable tecreset
+# Define Variable 
 tecreset=$(tput sgr0)
 
 # Check if connected to Internet or not
@@ -67,23 +67,21 @@ unset tecreset os architecture kernelrelease internalip externalip nameserver lo
 # Remove Temporary Files
 rm /tmp/osrelease /tmp/who /tmp/ramcache /tmp/diskusage
 
-# update system
+# Yellow and red color
 TEXT_RESET='\e[0m'
 TEXT_YELLOW='\e[0;33m'
 TEXT_RED_B='\e[1;31m'
 
-
+# Update system
 echo -e $TEXT_YELLOW
 echo 'APT update started...'
 echo -e $TEXT_RESET
-
 sudo apt-get update
-
 echo -e $TEXT_YELLOW
 echo 'APT update finished...'
 echo -e $TEXT_RESET
 
-
+# upgrade system
 echo -e $TEXT_YELLOW
 echo 'APT upgrade started...'
 echo -e $TEXT_RESET
@@ -92,7 +90,7 @@ echo -e $TEXT_YELLOW
 echo 'APT upgrade finished...'
 echo -e $TEXT_RESET
 
-
+# docker installation
 echo -e $TEXT_YELLOW
 echo 'Downloading Docker.io...'
 echo -e $TEXT_RESET
@@ -101,6 +99,7 @@ echo -e $TEXT_YELLOW
 echo 'Done !!...'
 echo -e $TEXT_RESET
 
+# pull zeek image
 echo -e $TEXT_YELLOW
 echo 'pulling zeek image...'
 echo -e $TEXT_RESET
@@ -109,6 +108,7 @@ echo -e $TEXT_YELLOW
 echo 'Done !!...'
 echo -e $TEXT_RESET
 
+# install tor and nyx
 echo -e $TEXT_YELLOW
 echo 'installing TOR & Nyx...'
 echo -e $TEXT_RESET
@@ -118,6 +118,7 @@ echo -e $TEXT_YELLOW
 echo 'TOR & Nyx installed seccessfully !!...'
 echo -e $TEXT_RESET
 
+# run zeek on docker
 echo -e $TEXT_YELLOW
 echo 'Creating ZEEK Container !!...'
 echo -e $TEXT_RESET
