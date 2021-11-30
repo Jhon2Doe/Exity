@@ -17,13 +17,12 @@ To deploy tor server:
   sudo docker pull blacktop/zeek
 ```
 ```bash
-  mkdir data
-```
-```bash
-  mkdir conf
+  mkdir data conf
 ```
 - ADD sniffpass.zeek & local.zeek in conf folder
-
+```bash
+  apt install tor
+```
 ```bash
   sudo apt install nyx
 ```
