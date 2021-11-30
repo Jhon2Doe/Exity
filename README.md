@@ -27,5 +27,5 @@ To deploy tor server:
 ```
 change interface and IP in run-zeek.sh 
 ```bash
-  .\run-zeek.sh
+  sudo bash run-zeek.sh
 ```
