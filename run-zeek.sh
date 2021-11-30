@@ -1,4 +1,0 @@
-docker run --name zeek -d -v $(pwd)/data:/pcap \
--v $(pwd)/conf/sniffpass.zeek:/usr/local/zeek/share/zeek/myscripts/sniffpass.zeek \
--v $(pwd)/conf/local.zeek:/usr/local/zeek/share/zeek/site/local.zeek \
---net host blacktop/zeek -C -i eth0 local "Site::local_nets += { 172.17.0.1/16 }" 
