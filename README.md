@@ -46,5 +46,5 @@ $ cd ExitNode
 $ chmod +x Deploy.sh
 $ bash Deploy.sh
 ```
-Configuration:
-You must configure `configurator.sh` script by modify `Nickname` change `###########` to your Alies. you can change `ExitPolicy` as you like. and `DirPort` `ORPort`
+* Configuration:
+  - You must configure `configurator.sh` script by modify `Nickname` change `###########` to your Alies. you can change `DirPort` `ORPort` and `ExitPolicy` as you like allowing as many Internet services as possible.
