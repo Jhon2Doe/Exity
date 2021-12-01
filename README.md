@@ -22,7 +22,6 @@
   * install docker
   * pull & create zeek image
   * install tor and nyx
-  * configurare Exit Node Tor Relay 
 
 ## >_ Volumes
 * `$(pwd)/data` logs dir.
@@ -48,3 +47,30 @@ $ bash Deploy.sh
 ```
 * Configuration:
   - You must configure `configurator.sh` script by modify `Nickname` change `###########` to your Alies. you can change `DirPort` `ORPort` and `ExitPolicy` as you like allowing as many Internet services as possible.
+
+```shell
+ORPort 9001
+Nickname ###########
+ContactInfo anonymous [tor-relay.co]
+Log notice file /var/log/tor/notices.log
+DirPort 80
+DirPortFrontPage /etc/tor/tor-exit-notice.html
+ExitPolicy accept *:20-23     # FTP, SSH, telnet
+ExitPolicy accept *:43        # WHOIS
+ExitPolicy accept *:53        # DNS
+ExitPolicy accept *:79-81     # finger, HTTP
+ExitPolicy accept *:88        # kerberos
+ExitPolicy accept *:110       # POP3
+ExitPolicy accept *:143       # IMAP
+ExitPolicy accept *:194       # IRC
+ExitPolicy accept *:220       # IMAP3
+ExitPolicy accept *:389       # LDAP
+ExitPolicy accept *:443       # HTTPS
+ExitPolicy accept *:464       # kpasswd
+ExitPolicy accept *:465       # URD for SSM (more often: an alternative SUBMISSION port, see 587)
+ExitPolicy accept *:531       # IRC/AIM
+ExitPolicy accept *:543-544   # Kerberos
+ExitPolicy accept *:554       # RTSP
+ExitPolicy accept *:563       # NNTP over SSL
+```
+
