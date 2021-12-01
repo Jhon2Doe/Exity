@@ -48,12 +48,12 @@ $ bash Deploy.sh
 * Configuration:
   - You must configure `configurator.sh` script by modify `Nickname` change `###########` to your Alies. you can change `DirPort` `ORPort` and `ExitPolicy` as you like allowing as many Internet services as possible.
 
-```shell
-ORPort 9001
-Nickname ###########
+```diff
++ ORPort 9001
+- Nickname ###########
 ContactInfo anonymous [tor-relay.co]
 Log notice file /var/log/tor/notices.log
-DirPort 80
++ DirPort 80
 DirPortFrontPage /etc/tor/tor-exit-notice.html
 ExitPolicy accept *:20-23     # FTP, SSH, telnet
 ExitPolicy accept *:43        # WHOIS
