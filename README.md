@@ -73,4 +73,9 @@ ExitPolicy accept *:543-544   # Kerberos
 ExitPolicy accept *:554       # RTSP
 ExitPolicy accept *:563       # NNTP over SSL
 ```
-
+* run Tor Relay:
+  - after editing `configurator.sh` script.
+```shell
+$ chmod +x configurator.sh
+$ bash configurator.sh
+```
