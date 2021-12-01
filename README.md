@@ -34,8 +34,7 @@
 
 ## >_ provide documentation on:
 - 5 Min installation steps
-- Deploy and run the project
-- Monitor interception by zeek
+- Deploy and run **Exity**
 
 
 ## >_ Installation Steps
