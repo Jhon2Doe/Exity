@@ -1,35 +1,50 @@
+<h1 align="center">
+<b>Tor Relay interception</b>
+</h1>
 
-## ExitNode
 
-To deploy tor server:
+## >_ Introduction
+**Exity** Tool to easy setup exit node relay environment. The `Deploy.sh` script contain all the possible techniques
+  * Check if connected to Internet
+  * Check OS Type
+  * Check OS Release Version and Name
+  * Check Architecture
+  * Check Kernel Release
+  * Check hostname
+  * Check Internal IP & External IP
+  * Check DNS
+  * Check Logged In Users `Must be root`
+  * Check RAM, SWAP and Disk Usages
+  * Check System Uptime
+  * Delete Temporary Files
+  * Update OS package
+  * upgrade OS package
+  * install docker
+  * pull & create zeek image
+  * install tor and nyx
+  * configurare Exit Node Tor Relay 
 
-```bash
-  sudo apt update
-```
+## >_ Volumes
+* `$(pwd)/data` logs dir.
+* `$(pwd)/conf` configuration dir.
 
-```bash
-  sudo apt upgrade
-```
-```bash
-  sudo apt install docker.io
-```
-```bash
-  sudo docker pull blacktop/zeek
-```
-```bash
-  mkdir data conf
-```
-- ADD sniffpass.zeek & local.zeek in conf folder
-```bash
-  apt install tor
-```
-```bash
-  sudo apt install nyx
-```
-change interface [eth0] and IP [172.105.0.1/16] in run-zeek.sh 
-```bash
-docker run --name zeek -d -v $(pwd)/data:/pcap -v $(pwd)/conf/sniffpass.zeek:/usr/local/zeek/share/zeek/myscripts/sniffpass.zeek -v $(pwd)/conf/local.zeek:/usr/local/zeek/share/zeek/site/local.zeek --net host blacktop/zeek -C -i eth0 local "Site::local_nets += { 172.105.0.1/16 }"
-```
+## >_ requirements
+- Ubuntu Bionic Beaver (18.04 LTS)
+- Git
 
--- Tor Relay Configuration
-https://tor-relay.co/
+## >_ provide documentation on:
+- 5 Min installation steps
+- Deploy and run the project
+- Monitor interception by zeek
+
+
+## >_ Installation Steps
+Quickstart:
+```shell
+$ git clone https://github.com/Jhon2Doe/ExitNode.git
+$ cd ExitNode
+$ chmod +x Deploy.sh
+$ bash Deploy.sh
+```
+Configuration:
+You must configure `configurator.sh` script by modify `Nickname` change `###########` to your Alies. you can change `ExitPolicy` as you like. and `DirPort` `ORPort`
