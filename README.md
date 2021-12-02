@@ -47,7 +47,7 @@ $ bash Deploy.sh
 ```
 * Configuration:
   - You must configure `configurator.sh` script by modify `Nickname` change `###########` to your Alies. 
-  - you can change `DirPort` `ORPort` and `ExitPolicy` as you like allowing as many Internet services as possible.
+  - you can change `DirPort` `ORPort` and `ExitPolicy`. allowing as many Internet services as possible.
 
 ```diff
 + ORPort 9001
