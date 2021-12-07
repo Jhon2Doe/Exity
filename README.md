@@ -41,9 +41,9 @@
 Quickstart:
 ```shell
 $ git clone https://github.com/Jhon2Doe/ExitNode.git
-$ cd ExitNode
-$ chmod +x Deploy.sh
-$ bash Deploy.sh
+$ cd Exity
+$ chmod +x exity.sh
+$ bash exity.sh
 ```
 * Configuration:
   - You must configure `configurator.sh` script by modify `Nickname` change `###########` to your Alies. 
