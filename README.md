@@ -5,7 +5,7 @@
 <img src="https://i.ibb.co/SB9jGnT/55555.png" align="right" height="100px" width="100px">
 
 ## >_ Introduction
-**Exity** Tool to easy setup exit node relay environment. The `Deploy.sh` script contain all the possible techniques
+**Exity** Tool to easy setup exit node relay environment. The `exity.sh` script contain all the possible techniques
   * Check if connected to Internet
   * Check OS Type
   * Check OS Release Version and Name
