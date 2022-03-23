@@ -52,7 +52,7 @@ $ bash exity.sh
 ```diff
 + ORPort 9001
 - Nickname ###########
-ContactInfo anonymous [tor-relay.co]
+- ContactInfo (YOU EMAIL) [tor-relay.co]
 Log notice file /var/log/tor/notices.log
 + DirPort 80
 DirPortFrontPage /etc/tor/tor-exit-notice.html
